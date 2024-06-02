@@ -19,3 +19,14 @@ age: 22,
 const myFunction = function() {
 console.log("Hello world");
 }
+
+
+//-------------------------------------------------------------------------
+
+
+/*
+
+    Stack Memory (Primitive) --> copy is given
+    Heap Memory (Non Primitive) --> reference is given
+
+*/
