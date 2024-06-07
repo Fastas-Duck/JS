@@ -24,4 +24,8 @@ console.log(arr2);
 console.log(Array.isArray("Aman"));             // check if aman is an array
 console.log(Array.from("Aman"));                // convert to array
 
+// make array from variable..
+let s1 = 100, s2 = 200, s3 = 300;
+console.log(Array.of(s1, s2, s3));
+
 console.log(Array.from({name : "Aman"}));       // gives empty array until we specify
