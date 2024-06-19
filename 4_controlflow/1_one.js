@@ -8,6 +8,8 @@
 */
 
 //      <, >, <=, >=, ==, =, !=, ===, !==
+//      The == operator compares the values of two variables after performing type conversion if necessary. 
+//      The === operator compares the values of two variables without performing type conversion.
 
 let temp = 41;
 if(temp == 41)
@@ -20,6 +22,7 @@ else
 }
 
 //------------------------------------------------------------------------------------------------
+// if-else-if
 
 let balance = 1000
 if(balance < 500)
@@ -36,6 +39,7 @@ else
 }
 
 //-------------------------------------------------------------------------------------------------
+// Real life exmaple -- shopping 
 
 const userLoggedIn = true
 const debitCard = true
@@ -50,3 +54,13 @@ if(loggedInFromEmail || loggedInFromGoogle)
 {
     console.log("User Logged In");
 }
+
+//-------------------------------------------------------------------------------------------------------------------
+// scope of if..
+
+if (score > 100) {
+    let power = "fly"
+    console.log(`User power: ${power}`);
+}
+
+console.log(`User power: ${power}`);

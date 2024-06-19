@@ -15,3 +15,21 @@ switch (num) {
     default:
         console.log("Number is greater than 2.");
 };
+
+/*
+
+SYNTAX :
+
+switch (key) 
+{
+    case value:
+        break;
+
+    case value:
+        break;
+        
+    default:
+        break;
+}
+
+*/
