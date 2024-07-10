@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Insert Element</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="number">
+        <li id="five">Five</li>
+        <li id="seven">Seven</li>
+        <li id="eight">Eight</li>
+    </ul>
+
+
+    <script>
+        const listitem = document.createElement('li')
+        console.log(listitem);
+        listitem.id = "four"
+        listitem.style.backgroundColor = "green"
+        listitem.innerText = "Four";
+
+        const ele = document.querySelector('.number')
+        ele.prepend(listitem)
+        // ele.append(listitem)
+    
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "submit"
+        div.id = Math.round(Math.random()*10 + 1);
+        div.setAttribute("title","generated title")
+        div.style.backgroundColor = "pink"
+        div.style.padding = "12px"
+    
+        const node = document.createTextNode("This is a new paragraph.");
+        div.appendChild(node);
+        
+        document.body.prepend(div);
+        // document.body.prepend(div);
+    
+    </script>
+
+
+</body>
+
+</html>
