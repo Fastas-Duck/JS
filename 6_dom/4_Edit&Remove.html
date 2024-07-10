@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <ul class="subject">
+        <li>DSA</li>
+    </ul>
+
+    <script>
+
+        // Add Listitem - by traversing whole tree
+        function addLanguage(langName)
+        {
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;   // traversing full tree
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguage("Python");
+        addLanguage("Typescript");
+
+
+        // Add listitem optimized way
+        function addOptiSub(subjectName)
+        {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(subjectName)); // direct adding
+            document.querySelector('.subject').appendChild(li);
+        }
+        addOptiSub("DBMS")
+        addOptiSub("Operating System")
+
+        // Edit
+        const secondLang = document.querySelector("li:nth-child(2)")
+        console.log(secondLang);
+
+        //secondLang.innerHTML = "Mojo"
+        const newli = document.createElement('li')
+        newli.textContent = "Mojo"
+        secondLang.replaceWith(newli)
+
+        //edit
+        const firstLang = document.querySelector("li:first-child")
+        firstLang.outerHTML = '<li>C++</li>'
+
+        //remove
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
+
+    </script>
+</body>
+
+</html>
