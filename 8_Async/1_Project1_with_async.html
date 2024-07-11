@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Project 1 with Async</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    // setTimeout(function with/without name, time in millisec)
+    setTimeout(function (){
+        console.log("Aman");
+    }, 2000)
+
+    const sayName = function(){
+        console.log("ABC");
+    }
+    setTimeout(sayName, 2000)        // Dont call function, just give reference
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML="Async - Project 1"
+    }
+    const change = setTimeout(changeText, 8000)
+
+    // stop the setTimeout before execution
+
+    // clearTimeout(change)  -- this is not good way, it will just stop everytime
+
+    // We need to call clearTimeout() when a certain vent happens..
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(change);
+        console.log("Name not Changed")
+    })
+
+</script>
+</html>
